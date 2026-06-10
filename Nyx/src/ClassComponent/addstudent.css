@@ -1,0 +1,256 @@
+/* Container Wrapper to isolate styles without using global selectors */
+.form-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ebedf2;
+  height: 100vh;
+  overflow-y: auto;
+  width: calc(100% - 230px);
+}
+
+/* Header */
+.form-header {
+  background-color: #1a2536; /* 💡 နောက်ခံ အဖြူပြောင်း */
+  color: #ffffff; /* 💡 စာလုံးအရောင် အမည်းပြောင်း */
+  display: flex;
+  gap: 16px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.back-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1; /* အနားသတ် စည်းလေးထည့် */
+  color: #1a2536; /* 💡 Icon အရောင် အမည်းပြောင်း */
+  width: 32px; /* Figma အတိုင်း အရွယ်အစား အနည်းငယ်ကြီးပေး */
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-header h2 {
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* Layout Content */
+.form-content {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 1.8;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.total-fees-card {
+  border-left: 4px solid #111e30;
+}
+
+/* Section Headings */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.section-title h3 {
+  font-size: 16px;
+  color: #111e30;
+  font-weight: 600;
+}
+
+.section-title .icon {
+  color: #4a5568;
+}
+
+.payment-title {
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 8px;
+}
+
+.icon-red {
+  color: #dc2626;
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #334155;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.row-group {
+  display: flex;
+  gap: 16px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+
+/* Radio Button Group */
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 38px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+}
+
+/* Total Fees Block */
+.fees-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4a5568;
+  letter-spacing: 0.5px;
+}
+
+.fees-amount {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a202c;
+  margin: 6px 0;
+}
+
+.fees-amount .currency {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.fees-subtext {
+  font-size: 11px;
+  color: #718096;
+}
+
+/* Payment Info Box */
+.info-box {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #fff;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  color: #718096;
+}
+
+.info-value {
+  color: #1a202c;
+  font-weight: 500;
+}
+
+.text-muted {
+  color: #a0aec0;
+}
+
+/* Upload Receipt Zone */
+.upload-zone {
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.upload-icon {
+  color: #94a3b8;
+  font-size: 28px;
+}
+
+.upload-zone span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Action Footer Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 15px;
+}
+
+/* Utilities */
+.margin-top-md {
+  margin-top: 16px;
+}
+.margin-top-lg {
+  margin-top: 28px;
+}

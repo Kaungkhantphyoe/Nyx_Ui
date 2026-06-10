@@ -1,0 +1,353 @@
+.course-page {
+  min-height: 100vh;
+  background: #efefef;
+  padding: 24px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.course-content {
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.page-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.course-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.course-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 14px;
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.card-title-row h3 {
+  font-size: 15px;
+  color: #222;
+  font-weight: 600;
+  width: 80%;
+}
+
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-icon {
+  color: #374151;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-icon:hover {
+  color: #2563eb;
+}
+
+.delete-icon {
+  color: #374151;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-icon:hover {
+  color: #dc2626;
+}
+
+.details-btn {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  background: #0f1f3d;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.details-btn:hover {
+  background: #162a53;
+}
+
+/* --- Shared Modal Backdrop Layout --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* --- Edit Modal Box --- */
+.modal-box {
+  background: #f4f5f7;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin: 0;
+  font-weight: 700;
+}
+
+.modal-close-icon {
+  cursor: pointer;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 1.1rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background-color: #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #4b5563;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  outline: 2px solid #93c5fd;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-btn-edit {
+  background-color: #a7f3d0;
+  color: #064e3b;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-btn-update {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- New Delete/Warning Confirm Box with (!) Icon --- */
+.delete-confirm-box-new {
+  background: #f4f7fa;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.new-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 1.4rem;
+}
+
+.warning-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.new-warning-icon {
+  color: #f59e0b !important;
+  font-size: 5rem !important;
+}
+
+.new-modal-title {
+  color: #0f172a;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.new-modal-msg {
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+  max-width: 90%;
+}
+
+.new-confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 380px;
+}
+
+.new-btn-cancel {
+  background-color: #e2e8f0;
+  color: #475569;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.new-btn-delete {
+  background-color: #2e3e4e;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Success Alert Box Layout --- */
+.success-box {
+  background: #e0ebf6;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.success-icon-wrapper {
+  background-color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.success-check-icon {
+  color: #15803d !important;
+  font-size: 2.5rem !important;
+}
+
+.success-title {
+  color: #1e293b;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.success-msg {
+  color: #64748b;
+  font-size: 1.05rem;
+  margin: 0 0 2rem 0;
+}
+
+.success-btn {
+  background-color: #1e293b;
+  color: #ffffff;
+  border: none;
+  width: 60%;
+  padding: 0.85rem 0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}

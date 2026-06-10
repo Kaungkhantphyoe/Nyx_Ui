@@ -1,0 +1,223 @@
+/* General Layout Structure */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f5f9;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =================  MAIN CONTENT STYLES ================= */
+.main-content {
+  flex-grow: 1;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 30px;
+  color: #0b1320;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  font-size: 2rem !important;
+}
+
+.add-course-btn {
+  background-color: #0b1320;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Column Banner Card Grid Alignment */
+.courses-grid {
+  display: flex;
+  gap: 25px;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.course-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ================= MODAL OVERLAYS & POPUPS ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Create Box */
+.modal-box {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 480px;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 26px;
+  color: #1e293b;
+}
+.close-icon {
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 24px;
+}
+.input-group {
+  margin-bottom: 18px;
+}
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 6px;
+}
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.cona {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc !important;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.upload-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  height: 130px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.upload-label {
+  display: flex !important;
+  flex-direction: column; /* 💡 Column ကနေ Row (ဘေးတိုက်) ကို ပြောင်းလိုက်တာပါ */
+  align-items: center; /* Icon နဲ့ စာသား အပေါ်အောက် အလယ်တည့်တည့် ဖြစ်အောင် */
+  justify-content: center;
+  gap: 8px; /* 💡 Icon နဲ့ စာသားကြား ဘေးတိုက် အကွာအဝေး စိတ်ကြိုက်ချန်ရန် */
+  color: #94a3b8;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.camera-icon {
+  font-size: 2rem !important;
+  margin-bottom: 0px; /* 💡 အပေါ်အောက် မဟုတ်တော့လို့ အောက်က margin ကို 0 ပေးလိုက်ပါတယ် */
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Success Box */
+.success-modal-box {
+  background: linear-gradient(to bottom, #e0f2fe, #f0f9ff);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  width: 320px;
+}
+.success-icon-wrapper {
+  background: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+}
+.success-icon {
+  color: #16a34a !important;
+  font-size: 2rem !important;
+}
+.success-modal-box h3 {
+  color: #1e3a8a;
+  margin: 6px 0;
+}
+.success-modal-box p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.success-btn {
+  background-color: #0b1320;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

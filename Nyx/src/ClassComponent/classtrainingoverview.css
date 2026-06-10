@@ -100,7 +100,7 @@
   border: 1px solid #1b263b;
   background-color: initial;
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 .ctobodyheader button {
   outline: none;
@@ -161,3 +161,4 @@
   display: flex;
   gap: 10px;
 }
+

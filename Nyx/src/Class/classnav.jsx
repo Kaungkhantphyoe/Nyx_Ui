@@ -43,7 +43,7 @@ function ClassNav() {
           </div>
 
           <div className="classbutton">
-            <NavLink to="classoverview">Class Overview</NavLink>
+            <NavLink to="classoverview">Overview</NavLink>
 
             <div className="training">
               <button
@@ -62,6 +62,9 @@ function ClassNav() {
 
               {show1 && (
                 <span className="dropdownwarper">
+                   <NavLink className="dropdownlist" to="classcourses">
+                    Courses
+                  </NavLink>
                   <NavLink className="dropdownlist" to="classcoursemanagement">
                     Course Management
                   </NavLink>

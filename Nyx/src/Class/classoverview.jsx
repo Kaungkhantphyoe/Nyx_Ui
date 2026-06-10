@@ -5,9 +5,15 @@ function ClassOverview() {
   return (
     <div className="comain">
       <div className="coswitch">
-        <h2 className="coheader">
-          <BoltIcon sx={{ fontSize: "30px" }} /> Service Overviews
-        </h2>
+       {/* Header */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "24px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <span style={{ fontSize: "35px", fontWeight: 800, color: "#111827" }}>⚡ Services Overview</span>
+        </div>
+        <div style={{ display: "flex", gap: "4px",  borderRadius: "10px", padding: "4px" }}>
+        </div>
+      </div>
+
         <div className="coshwitchbtn">
           <NavLink to="classtrainingoverview">Training</NavLink>
           <NavLink to="classrentaloverview">Rental</NavLink>
@@ -17,7 +23,7 @@ function ClassOverview() {
       <div>
         <Outlet />
       </div>
-    </div>
+    </div>                                              
   );
 }
 export default ClassOverview;

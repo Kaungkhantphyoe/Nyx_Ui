@@ -28,14 +28,15 @@ import AcademicLogin from "./Account/academiclogin";
 import PosProtectedRoute from "./Hooks/PosProtectedRoute";
 import ClassNav from "./Class/classnav";
 import ClassOverview from "./Class/classoverview";
-import ClassStudent from "./Class/classstudent";
+import ClassStudent from "./ClassComponent/classstudent";
+import AddStudentForm from "./ClassComponent/addstudent";
 import ClassOrder from "./Class/classorder";
 import ClassMenu from "./Class/classmenu";
 import ClassSetting from "./Class/classsetting";
 import MobileOrder from "./Routes/mobileorder";
 import LocalOrder from "./Routes/localorder";
 import AddOrder from "./Routes/AddOrder";
-import CourseManagement from "./Class/coursemanagement";
+import CourseManagement from "./ClassComponent/coursemanagement";
 import BookingSchedule from "./Class/classbookingschedule";
 import BookingList from "./Class/classbookinglist";
 import VenueManagement from "./Class/classvenuemanagement";
@@ -51,6 +52,8 @@ import ClassProtectedRoute from "./Hooks/ClassProtectedRouted";
 import ClassTrainingOverview from "./ClassComponent/classtrainingoverview";
 import ClassRentalOverveiw from "./ClassComponent/classrentaloverview";
 import ClassCanteenOverview from "./ClassComponent/classcanteenoverview";
+import Courses from "./ClassComponent/courses";
+import AddClassForm from "./ClassComponent/courseaddclass ";
 
 function App() {
   const [childData, SetchildData] = useState({});
@@ -156,6 +159,10 @@ function App() {
                   element={<ClassCanteenOverview />}
                 />
               </Route>
+              <Route path="classcourses" element={<Courses />}>
+                <Route path="add_courseclass" element={<AddClassForm />} />
+              </Route>
+
               <Route
                 path="classcoursemanagement"
                 element={<CourseManagement />}
@@ -169,7 +176,9 @@ function App() {
                   element={<NextProgramDetails />}
                 />
               </Route>
-              <Route path="classstudent" element={<ClassStudent />} />
+              <Route path="classstudent" element={<ClassStudent />}>
+                <Route path="add_student" element={<AddStudentForm />} />
+              </Route>
               <Route
                 path="classbookingschedule"
                 element={<BookingSchedule />}
